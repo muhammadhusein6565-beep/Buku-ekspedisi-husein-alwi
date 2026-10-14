@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buku Ekspedisi Polbangtan Medan</title>
+<style>
+:root{--bg:#f4f1e6;--card:#fffdf6;--ink:#23342a;--mut:#6b7a70;--line:#dcd8c6;--g1:#2d8a57;--g2:#1e6f40;--or:#e8743b;--am:#e29a15;--btn:#f2a01d;--inp:#fff;--row:#f7f4e9;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101c15;--card:#1b2a22;--ink:#e8efe9;--mut:#9db1a4;--line:#2b3d32;--inp:#14231b;--row:#20312a}}
+:root[data-theme="dark"]{--bg:#101c15;--card:#1b2a22;--ink:#e8efe9;--mut:#9db1a4;--line:#2b3d32;--inp:#14231b;--row:#20312a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.4}
+.wrap{max-width:1000px;margin:0 auto;padding:14px}
+.hero{border-radius:22px;overflow:hidden;position:relative;min-height:230px;background:linear-gradient(#ffeab5,#e6eebb 60%,#7fba70);color:#23342a}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .t{position:relative;margin:26px 18px;padding:16px 20px;background:rgba(255,253,240,.82);border-radius:18px;max-width:520px}
+.hero h1{margin:0;color:#1e6f40;font-size:clamp(26px,6vw,38px);letter-spacing:.5px}
+.hero hr{border:0;height:4px;width:80px;background:var(--btn);border-radius:4px;margin:8px 0}
+.hero p{margin:2px 0;font-size:14px}.hero b{font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.st{border-radius:20px;color:#fff;text-align:center;padding:16px 8px}
+.st big{display:block;font-size:42px;font-weight:700;line-height:1.1}.st span{font-weight:600}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.tab{padding:14px;border-radius:18px;border:2px solid var(--line);background:var(--card);color:var(--g1);font:700 17px inherit;font-family:inherit;cursor:pointer}
+.tab.on{background:var(--g2);color:#fff;border-color:var(--g2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:14px}
+h2{margin:0 0 12px;color:var(--g1);font-size:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:600;color:var(--mut);margin-bottom:4px}
+input,select{width:100%;padding:12px;border-radius:14px;border:1px solid var(--line);background:var(--inp);color:var(--ink);font:inherit}
+.btn{background:var(--btn);color:#3b2600;border:0;border-radius:14px;padding:13px 26px;font:700 17px inherit;font-family:inherit;cursor:pointer}
+.btn:disabled{opacity:.5}
+.msg{font-size:13px;color:var(--mut);margin-top:8px}
+.warn{background:#fff3d6;color:#6b4700;border-radius:14px;padding:10px 14px;margin-bottom:14px;font-size:14px}
+.sc{overflow-x:auto;border-radius:14px}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:14px}
+th{background:var(--g2);color:#fff;padding:12px 8px;text-align:center}
+td{padding:11px 8px;border-bottom:1px solid var(--line)}tr:nth-child(even) td{background:var(--row)}
+td.c{text-align:center;white-space:nowrap}
+.pill{border:0;border-radius:99px;padding:5px 14px;font:700 13px inherit;font-family:inherit;color:#fff;cursor:pointer}
+.pill.s{background:var(--g1)}.pill.b{background:var(--or)}
+.del{background:none;border:0;color:var(--mut);cursor:pointer;font-size:16px}
+.head{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px}.head h2{margin:0}.head input{flex:1;min-width:200px}
+.bars .r{display:grid;grid-template-columns:110px 1fr 28px;gap:8px;align-items:center;margin:6px 0;font-size:13px}
+.bars .r.w{grid-template-columns:150px 1fr 28px}
+.bar{height:16px;background:var(--row);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--g1),var(--am));border-radius:9px}
+.donut{width:150px;height:150px;border-radius:50%;margin:0 auto;display:grid;place-items:center}
+.donut div{width:98px;height:98px;border-radius:50%;background:var(--card);display:grid;place-items:center;font:700 26px system-ui}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:700px){.two{grid-template-columns:1fr}}
+.lg{display:flex;justify-content:center;gap:16px;margin-top:10px;font-size:13px}
+.lg b{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.empty{text-align:center;color:var(--mut);padding:24px}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <svg viewBox="0 0 800 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <circle cx="260" cy="90" r="62" fill="#ffc23d"/>
+      <path d="M0 200Q250 150 520 190T800 170V260H0Z" fill="#7fba70"/><path d="M0 235Q300 200 800 225V260H0Z" fill="#4e9a56"/>
+      <g stroke="#5b3d28" stroke-width="9" stroke-linecap="round" fill="none"><path d="M560 250Q555 190 570 120"/><path d="M690 250Q695 200 700 140"/><path d="M420 250Q425 200 415 150"/></g>
+      <g stroke="#2d8a57" stroke-width="7" stroke-linecap="round" fill="none"><path d="M570 120Q610 85 650 100M570 120Q540 80 500 90M570 120Q575 70 600 50M700 140Q740 110 780 125M700 140Q665 105 635 115M415 150Q450 120 485 135M415 150Q380 115 350 130"/></g>
+      <g fill="#f0a0a0"><circle cx="570" cy="125" r="9"/><circle cx="700" cy="145" r="8"/></g>
+    </svg>
+    <div class="t"><h1>BUKU EKSPEDISI</h1><hr><p><b>Catatan Surat Keluar Digital</b></p><p>Penyuluhan Perkebunan Presisi | Polbangtan Medan</p></div>
+  </div>
+
+  <div class="stats">
+    <div class="st" style="background:var(--g1)"><big id="sTot">0</big><span>Total Surat Keluar</span></div>
+    <div class="st" style="background:var(--g2)"><big id="sOk">0</big><span>Sudah TTD</span></div>
+    <div class="st" style="background:var(--or)"><big id="sNo">0</big><span>Belum TTD</span></div>
+    <div class="st" style="background:var(--am)"><big id="sPct">0%</big><span>Persentase Selesai</span></div>
+  </div>
+
+  <div class="tabs"><button class="tab on" id="t1">Buku Ekspedisi</button><button class="tab" id="t2">Rekap &amp; Grafik</button></div>
+  <div id="notice"></div>
+
+  <section id="v1">
+    <div class="card" id="formCard">
+      <h2>Tambah Surat Keluar</h2>
+      <div class="grid">
+        <div><label>Dikirim Tanggal</label><input type="date" id="fKirim"></div>
+        <div><label>Nomor Surat</label><input id="fNo" placeholder="101/PPM/10/2026"></div>
+        <div><label>Tanggal Surat</label><input type="date" id="fTgl"></div>
+        <div><label>Perihal Surat (Isi Surat)</label><input id="fPerihal"></div>
+        <div><label>Dikirim Kepada Dinas/Instansi</label><input id="fInst" list="dl"><datalist id="dl"></datalist></div>
+        <div><label>Nama Penerima</label><input id="fNama"></div>
+        <div><label>TTD Penerima</label><select id="fTtd"><option>Belum</option><option>Sudah</option></select></div>
+        <div style="align-self:end"><button class="btn" id="btnSave">Simpan</button></div>
+      </div>
+      <div class="msg" id="fMsg"></div>
+    </div>
+    <div class="card">
+      <div class="head"><h2>Daftar Surat</h2><input id="q" placeholder="Cari nomor, perihal, instansi..."></div>
+      <div class="sc"><table><thead><tr><th>Nomor urut</th><th>Dikirim Tanggal</th><th>Nomor Surat</th><th>Tanggal Surat</th><th>Perihal Surat</th><th>Dikirim Kepada</th><th>Nama Penerima</th><th>TTD Penerima</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="v2" hidden>
+    <div class="two">
+      <div class="card"><h2>Surat per Bulan</h2><div class="bars" id="bMonth"></div></div>
+      <div class="card"><h2>Status TTD Penerima</h2><div class="donut" id="dn"><div id="dnT">0%</div></div><div class="lg"><span><b style="background:var(--g1)"></b>Sudah</span><span><b style="background:var(--or)"></b>Belum</span></div></div>
+    </div>
+    <div class="card"><h2>Per Dinas/Instansi</h2><div class="bars" id="bInst"></div></div>
+  </section>
+  <footer><a href="#" id="cfg" style="color:inherit">⚙ Pengaturan database</a> · <a href="#" id="shr" style="color:inherit">🔗 Salin tautan bagikan</a><br>Buku Ekspedisi Digital · Penyuluhan Perkebunan Presisi · Polbangtan Medan</footer>
+</div>
+
+<script>
+const SEED=[["2026-05-11","100/PPM/05/2026","2026-05-11","Undangan rapat koordinasi","Kantor Camat Air Putih","Rahmat","Belum"],["2026-05-16","101/PPM/05/2026","2026-05-15","Undangan rapat koordinasi","Gapoktan Sawit Makmur","Agus Salim","Sudah"],["2026-05-21","102/PPM/05/2026","2026-05-20","Permohonan data petani sawit","Kantor Camat Air Putih","Siti Aminah","Sudah"],["2026-05-29","103/PPM/05/2026","2026-05-29","Permohonan data petani sawit","Gapoktan Sawit Makmur","Siti Aminah","Sudah"],["2026-06-03","104/PPM/06/2026","2026-06-01","Pemberitahuan jadwal kunjungan","Gapoktan Sawit Makmur","Rahmat","Belum"],["2026-06-08","105/PPM/06/2026","2026-06-06","Permohonan izin kegiatan lapangan","Dinas Pertanian Kab. Batu Bara","Dewi Lestari","Sudah"],["2026-06-13","106/PPM/06/2026","2026-06-11","Surat tugas penyuluhan","BPP Kec. Lima Puluh","Rahmat","Sudah"],["2026-06-19","107/PPM/06/2026","2026-06-18","Permohonan data petani sawit","Dinas Perkebunan Provinsi Sumut","Agus Salim","Sudah"],["2026-06-25","108/PPM/06/2026","2026-06-24","Pemberitahuan jadwal kunjungan","Politeknik Pembangunan Pertanian Medan","Budi Santoso","Sudah"],["2026-07-03","109/PPM/07/2026","2026-07-02","Laporan kegiatan bulanan","BPP Kec. Lima Puluh","Siti Aminah","Sudah"],["2026-07-09","110/PPM/07/2026","2026-07-09","Permohonan izin kegiatan lapangan","Gapoktan Sawit Makmur","Agus Salim","Sudah"],["2026-07-16","111/PPM/07/2026","2026-07-14","Permohonan izin kegiatan lapangan","Kantor Camat Air Putih","Agus Salim","Belum"],["2026-07-21","112/PPM/07/2026","2026-07-19","Surat tugas penyuluhan","Kantor Camat Air Putih","Budi Santoso","Sudah"],["2026-07-29","113/PPM/07/2026","2026-07-28","Permohonan data petani sawit","Dinas Perkebunan Provinsi Sumut","Agus Salim","Sudah"],["2026-08-05","114/PPM/08/2026","2026-08-04","Undangan pelatihan panen sawit","Politeknik Pembangunan Pertanian Medan","Agus Salim","Sudah"],["2026-08-13","115/PPM/08/2026","2026-08-13","Permohonan izin kegiatan lapangan","Dinas Perkebunan Provinsi Sumut","Dewi Lestari","Sudah"],["2026-08-18","116/PPM/08/2026","2026-08-18","Permohonan izin kegiatan lapangan","Politeknik Pembangunan Pertanian Medan","Fitri Handayani","Sudah"],["2026-08-26","117/PPM/08/2026","2026-08-25","Pemberitahuan jadwal kunjungan","Politeknik Pembangunan Pertanian Medan","Fitri Handayani","Sudah"],["2026-09-03","118/PPM/09/2026","2026-09-02","Permohonan data petani sawit","Dinas Pertanian Kab. Batu Bara","Dewi Lestari","Sudah"],["2026-09-10","119/PPM/09/2026","2026-09-10","Laporan kegiatan bulanan","Politeknik Pembangunan Pertanian Medan","Dewi Lestari","Sudah"],["2026-09-18","120/PPM/09/2026","2026-09-18","Permohonan rekomendasi","Dinas Pertanian Kab. Batu Bara","Dewi Lestari","Sudah"],["2026-09-24","121/PPM/09/2026","2026-09-23","Permohonan izin kegiatan lapangan","Gapoktan Sawit Makmur","Fitri Handayani","Sudah"],["2026-10-01","122/PPM/10/2026","2026-09-29","Laporan kegiatan bulanan","Kantor Camat Air Putih","Siti Aminah","Sudah"],["2026-10-07","123/PPM/10/2026","2026-10-07","Laporan kegiatan bulanan","Politeknik Pembangunan Pertanian Medan","Rahmat","Sudah"]]
+ .map((r,i)=>({id:"seed"+String(i).padStart(3,"0"),kirim:r[0],nomor:r[1],tgl:r[2],perihal:r[3],instansi:r[4],nama:r[5],ttd:r[6]}));
+const $=id=>document.getElementById(id);
+const BLN=["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+// === PENGATURAN: tempel URL Web App Google Apps Script di sini ===
+const _q=new URLSearchParams(location.search).get("api");
+if(_q){try{localStorage.setItem("bek_api",_q)}catch(e){}}
+let API_URL=_q||"";if(!API_URL){try{API_URL=localStorage.getItem("bek_api")||""}catch(e){}}
+// =================================================================
+let rows=[], canWrite=true;
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=d=>d?d.split("-").reverse().join("/"):"";
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const sorted=()=>rows.slice().sort((a,b)=>(a.kirim+a.id).localeCompare(b.kirim+b.id));
+
+function render(){
+  const s=sorted(), tot=s.length, ok=s.filter(r=>r.ttd==="Sudah").length;
+  $("sTot").textContent=tot;$("sOk").textContent=ok;$("sNo").textContent=tot-ok;
+  const pct=tot?Math.round(ok/tot*100):0;$("sPct").textContent=pct+"%";
+  const q=$("q").value.toLowerCase();
+  const html=s.map((r,i)=>({r,i:i+1})).filter(({r})=>!q||[r.nomor,r.perihal,r.instansi,r.nama].join(" ").toLowerCase().includes(q))
+   .map(({r,i})=>`<tr><td class="c">${i}</td><td class="c">${fmt(r.kirim)}</td><td class="c">${esc(r.nomor)}</td><td class="c">${fmt(r.tgl)}</td><td>${esc(r.perihal)}</td><td>${esc(r.instansi)}</td><td>${esc(r.nama)}</td><td class="c"><button class="pill ${r.ttd==="Sudah"?"s":"b"}" data-t="${esc(r.id)}">${esc(r.ttd)}</button></td><td class="c">${canWrite?`<button class="del" data-d="${esc(r.id)}" title="Hapus">🗑</button>`:""}</td></tr>`).join("");
+  $("tb").innerHTML=html||`<tr><td colspan="9" class="empty">Belum ada surat.</td></tr>`;
+  $("dl").innerHTML=[...new Set(rows.map(r=>r.instansi))].map(v=>`<option value="${esc(v)}">`).join("");
+  // rekap
+  const mc=Array(12).fill(0);s.forEach(r=>{const m=+r.kirim.slice(5,7)-1;if(m>=0)mc[m]++});
+  const mx=Math.max(1,...mc);
+  $("bMonth").innerHTML=mc.map((n,i)=>`<div class="r"><span>${BLN[i]}</span><div class="bar"><i style="width:${n/mx*100}%"></i></div><b>${n}</b></div>`).join("");
+  const ic={};s.forEach(r=>ic[r.instansi]=(ic[r.instansi]||0)+1);
+  const il=Object.entries(ic).sort((a,b)=>b[1]-a[1]), im=Math.max(1,...il.map(x=>x[1]));
+  $("bInst").innerHTML=il.map(([k,n])=>`<div class="r w"><span>${esc(k)}</span><div class="bar"><i style="width:${n/im*100}%"></i></div><b>${n}</b></div>`).join("")||`<div class="empty">Belum ada data.</div>`;
+  $("dn").style.background=tot?`conic-gradient(var(--g1) 0 ${pct}%,var(--or) ${pct}% 100%)`:"var(--row)";
+  $("dnT").textContent=pct+"%";
+  suggest();
+}
+function suggest(){
+  const kirim=$("fKirim").value||today();
+  const n=rows.reduce((m,r)=>Math.max(m,parseInt(r.nomor)||0),99)+1;
+  $("fNo").placeholder=n+"/PPM/"+kirim.slice(5,7)+"/"+kirim.slice(0,4);
+}
+function tab(n){$("v1").hidden=n!==1;$("v2").hidden=n!==2;$("t1").classList.toggle("on",n===1);$("t2").classList.toggle("on",n===2)}
+$("t1").onclick=()=>tab(1);$("t2").onclick=()=>tab(2);
+$("q").oninput=render;$("fKirim").onchange=suggest;
+$("fKirim").value=today();
+
+const LOCAL=!API_URL;
+const lsGet=()=>{try{return JSON.parse(localStorage.getItem("bekspedisi"))||SEED.slice()}catch(e){return SEED.slice()}};
+const lsSet=()=>{try{localStorage.setItem("bekspedisi",JSON.stringify(rows))}catch(e){}};
+async function load(){
+  if(LOCAL){rows=lsGet();render();return}
+  try{const r=await fetch(API_URL+"?t="+Date.now());rows=await r.json();render();}
+  catch(e){$("notice").innerHTML='<div class="warn">Gagal memuat data. Periksa koneksi internet.</div>'}
+}
+async function send(p){
+  if(LOCAL){
+    if(p.action==="add")rows.push({...p,id:"s"+Date.now()});
+    if(p.action==="toggle"){const r=rows.find(x=>x.id===p.id);r.ttd=r.ttd==="Sudah"?"Belum":"Sudah"}
+    if(p.action==="delete")rows=rows.filter(x=>x.id!==p.id);
+    lsSet();render();return {ok:true};
+  }
+  const r=await fetch(API_URL,{method:"POST",body:JSON.stringify(p)});
+  const j=await r.json();if(j.ok)await load();return j;
+}
+$("btnSave").onclick=async()=>{
+  const v={action:"add",kirim:$("fKirim").value,nomor:$("fNo").value.trim()||$("fNo").placeholder,tgl:$("fTgl").value||$("fKirim").value,perihal:$("fPerihal").value.trim(),instansi:$("fInst").value.trim(),nama:$("fNama").value.trim(),ttd:$("fTtd").value};
+  if(!v.kirim||!v.perihal||!v.instansi||!v.nama){$("fMsg").textContent="Lengkapi tanggal, perihal, instansi, dan nama penerima.";return}
+  $("btnSave").disabled=true;$("fMsg").textContent="Menyimpan...";
+  try{await send(v);["fPerihal","fInst","fNama","fTgl","fNo"].forEach(k=>$(k).value="");$("fTtd").value="Belum";$("fMsg").textContent="✔ Surat tersimpan.";}
+  catch(e){$("fMsg").textContent="Gagal menyimpan. Coba lagi."}
+  $("btnSave").disabled=false;
+};
+$("tb").onclick=async e=>{
+  const t=e.target.dataset.t,d=e.target.dataset.d;if(!t&&!d)return;
+  try{
+    if(t)await send({action:"toggle",id:t});
+    else{const pin=LOCAL?"":prompt("Masukkan PIN admin untuk menghapus:");
+      if(LOCAL?confirm("Hapus surat ini?"):pin){const j=await send({action:"delete",id:d,pin});if(!j.ok)alert("PIN salah.")}}
+  }catch(err){$("fMsg").textContent="Gagal mengubah data."}
+};
+if(LOCAL)$("notice").innerHTML='<div class="warn">Mode contoh: data hanya tersimpan di HP ini. Isi API_URL (lihat panduan) agar data dipakai bersama.</div>';
+$("cfg").onclick=e=>{e.preventDefault();const u=prompt("Tempel URL Web App Google Apps Script (kosongkan untuk mode contoh):",API_URL);if(u===null)return;try{localStorage.setItem("bek_api",u.trim())}catch(x){}location.href=location.pathname+(u.trim()?"?api="+encodeURIComponent(u.trim()):"")};
+$("shr").onclick=async e=>{e.preventDefault();if(!API_URL){alert("Isi pengaturan database dulu.");return}
+ const l=location.origin+location.pathname+"?api="+encodeURIComponent(API_URL);try{await navigator.clipboard.writeText(l);alert("Tautan disalin. Bagikan ke rekan Anda.")}catch(x){prompt("Salin tautan ini:",l)}};
+render();load();if(!LOCAL)setInterval(load,20000);
+</script>
+</body>
+</html>
